@@ -71,16 +71,29 @@ list.addEventListener("drop", e => {
   let sadly = 0;
   const { offsetX, offsetY } = e;
   const { files } = e.dataTransfer;
-  reader.readAsDataURL(files[0]);
+  handleFile(files[0], offsetX, offsetY);
+});
 
+droppable.addEventListener("click", () => {
+  fileInput.click();
+});
+
+fileInput.addEventListener("change", event => {
+  const fileList = event.target.files;
+  handleFile(fileList[0]);
+});
+
+const handleFile = (file, offsetX, offsetY) => {
+  reader.readAsDataURL(file);
+  let sadly = 0;
   reader.addEventListener("load", () => {
     sadly++;
     if (sadly > 1) return;
-    itemMarkup(files[0], reader.result, offsetX, offsetY);
-    
+    itemMarkup(file, reader.result, offsetX, offsetY);
+
     // Send file to Flask backend via AJAX
     const formData = new FormData();
-    formData.append('file', files[0]);
+    formData.append('file', file);
 
     fetch('/upload', {
       method: 'POST',
@@ -93,15 +106,15 @@ list.addEventListener("drop", e => {
       return response.text();
     })
     .then(data => {
+      $('div.list').empty();
+
       $('div.list').append('<h4 class="Statusmsg">'+ data +'</h4>');
     })
     .catch(error => {
       console.error('There has been a problem with your fetch operation:', error);
     });
   });
-
-  droppable.classList.remove("is-over");
-});
+};
 
 const itemMarkup = (file, url, x, y) => {
   const item = document.createElement("div");
@@ -180,35 +193,3 @@ const itemIndex = id => {
   });
   return index;
 };
-
-
-$(document).ready(function() {
-  $(".droppable").click(function() {
-    $("#fileInput").click();
-  });
-
-  $("#fileInput").change(function(event) {
-    const fileList = event.target.files;
-    // Send file to Flask backend via AJAX
-    const formData = new FormData();
-    formData.append('file', fileList[0]);
-  });
-  fetch('/upload', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.text();
-  })
-  .then(data => {
-    $('div.list').append('<h4 class="Statusmsg">'+ data +'</h4>');
-  })
-  .catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
-  });
-  droppable.classList.remove("is-over");
-});
-
