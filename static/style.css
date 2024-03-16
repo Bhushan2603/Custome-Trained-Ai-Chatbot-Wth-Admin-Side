@@ -1,0 +1,307 @@
+
+
+
+@media (min-width:786px) {
+   
+
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup.active {
+  opacity: 1;
+}
+
+.popup-content { 
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin: 2px;
+}
+
+
+.username {
+  margin-top: 10px;
+  width: 240px;
+  padding-bottom: 2px;
+  padding-left:5px ; 
+  border: none; /* Remove border */
+  border-radius: 15px; /* Remove border radius */
+  border-bottom: 1px solid black; /* Add bottom border */
+  box-sizing: border-box; /* Include padding in width */
+  background-color: transparent; /* Ensure background is transparent */
+  outline: none; /* Remove default outline */
+}
+
+/* Style for the input when focused */
+.username:focus {
+  border-bottom: 2px solid black; /* Increase thickness when focused */
+}
+
+
+.popupsubmitbtn {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 7px 20px;
+  background-color: #1c1c1c;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popupsubmitbtn:hover {
+  background-color: #ffffff;
+  border: 2px dashed black;
+  color: black;
+}
+ body{
+    background-color: #001118;
+     
+  }
+   
+  #chat-container {
+    overflow-y: hidden;
+      height: 590px;
+      width: 370px;
+      background-size: contain;
+      border: 1px solid white;
+       box-shadow: 0px 0px 10px rgb(126, 126, 126); 
+      background-image: url("bg-mobile.jpg");
+      padding: 10px;
+      border-radius: 25px; 
+      position: relative;
+     margin-left: auto;
+    margin-right: auto;
+  margin-top:40px;
+  padding:0;
+    word-wrap: break-word;
+  } 
+   #chat-messages{
+  overflow-y: auto;
+  height:465px;
+  background-color:transparent;
+  margin:0 5px; 
+  display: flex;
+  flex-direction: column; /* Stack messages vertically */  
+  }
+  
+  .header{
+  background-color: transparent; 
+  margin:0; 
+  height:60px;
+  }
+  .name{
+  font-size:18px;
+  font-family:cursive;
+  background-color: transparent;
+  text-align:center;
+  margin:0;
+  padding-top:15px;
+  color:white
+  }
+  #user-message{
+     background-color:transparent;
+  border:1px solid rgb(255, 255, 255);
+  border-radius:25px;
+  position: absolute; 
+  width:350px;
+    bottom: 10px;
+  margin-left:10px;
+  display: flex;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  input{
+  background-color:transparent;
+  border:none;
+  height:50px;
+  font-size:18px;
+  border-radius:25px;
+  padding-left:15px;
+  width:270px;
+  color:white
+  }
+   
+  .sendtext{
+    color: white;
+    background: none;
+    font-size: 20px;
+    margin: 0;
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+   
+   
+  
+  .self-content {
+  color: white;
+  background-color: #ff00ddbb; 
+  border-radius:10px 10px 0px 10px; 
+  padding:10px 7px;
+  font-family:cursive; 
+  font-size:14px;
+  margin:4px 0;
+  text-align:left;
+  width:80%;
+  overflow:word-wrap;
+  float:right;
+  align-self: flex-end; /* Align user messages to the right */
+  }
+  .bot-content{ 
+  background-color: #000000ab;
+  border-radius:10px 10px 10px 0px; 
+  padding:10px 7px;; 
+  font-family:cursive;
+  margin:4px 0;
+  color:rgb(255, 255, 255); 
+  width:80%;
+  overflow:word-wrap;
+  font-size:14px;
+  text-align:left;
+  }
+  #chat-messages::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  /* Hide the scrollbar for Firefox */
+  #chat-messages {
+    scrollbar-width: none;
+  }
+  
+  /* Optional: Style the scrollbar thumb for WebKit-based browsers */
+  #chat-messages::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+
+
+
+@media (max-width:786px){ 
+*{
+  margin:0;
+  padding: 0 2px;
+  background-image: url("bg-mobile.jpg"); 
+  background-size: cover;
+}
+.header{
+  background-color: transparent; 
+  margin:0; 
+  height:60px;
+  }
+  .name{
+    font-size:24px;
+    font-family:cursive;
+    background-color: transparent;
+    text-align:center;
+    margin:0;
+    padding-top:15px;
+    color:white
+    }
+    #user-message{
+      background :rgba(12, 45, 75, 0.781);
+      border:1px solid rgb(255, 255, 255);
+      border-radius:25px;
+      position: absolute;  
+      width:97%; 
+      bottom: 0px;
+      display: flex;
+      margin-bottom: 10px;
+      }
+      input{
+        background : transparent;
+        border:none;
+        height:50px;
+        font-size:18px;
+        border-radius:25px;
+        padding-left:15px;
+        width:90%;
+        color:white
+        }
+        
+      input:focus {
+         outline: none;
+        }
+        .sendtext{
+          color: white;
+          background: none;
+          font-size: 20px;
+          margin: 0;
+          padding: 15px;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        #chat-messages{
+          overflow-y: auto;
+          height:100%;
+          background :transparent;
+          height: 528px;
+          margin:0 5px; 
+          display: flex;
+          flex-direction: column; /* Stack messages vertically */  
+          }
+          #chat-messages::-webkit-scrollbar {
+            width: 0;
+          }
+          
+          /* Hide the scrollbar for Firefox */
+          #chat-messages {
+            scrollbar-width: none;
+          }
+          
+          /* Optional: Style the scrollbar thumb for WebKit-based browsers */
+          #chat-messages::-webkit-scrollbar-thumb {
+            background-color: transparent;
+          }
+          .self-content {
+          background: rgba(175, 0, 224, 0.637);
+          word-wrap: break-word;
+          font-size: 16px;
+          margin: 8px 0;
+          overflow:word-wrap;
+          width:60%;
+          border-radius:10px 10px 0px 10px; 
+          padding:17px 7px; 
+          font-family: cursive;
+          color: white;
+          float:right;
+          align-self: flex-end; /* Align user messages to the right */
+          }
+          
+          
+          .bot-content{
+           margin:0;
+          background : #0e0e0ec5;
+          border-radius:10px 10px 10px 0px; 
+          padding:17px 7px; 
+          font-family:cursive;
+          color:rgb(255, 255, 255); 
+          width:60%;
+          word-wrap: break-word;
+          text-align:center; 
+          font-size:14px;
+          text-align:left;
+          }
+ 
+}

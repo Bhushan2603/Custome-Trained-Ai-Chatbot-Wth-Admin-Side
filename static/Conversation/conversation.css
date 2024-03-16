@@ -1,0 +1,222 @@
+.conversation {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.503);
+  }
+
+
+  .right-section {
+    flex: 3;
+    background: linear-gradient(to right, #53afff57, #ff76a869);
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;  
+    flex-direction: column;
+  }
+
+  .left-section {
+  flex: 1;
+  background-color: #008bc6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  padding-right: 0;
+  overflow-y: auto;
+  position: relative; /* Add this line */
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 100%;
+  padding-right: 20px; /* Add this line */
+  margin-right: -10px; /* Add this line */
+}
+
+.user-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.user-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.user-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.user-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+
+  .user-list li {
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s,border-radius 0.3s;
+    background-color: white;
+    color: #000000;
+    text-align: center;
+    width: 120px;
+  }
+
+  .user-list li:hover {
+    background: linear-gradient(to right,#ff00c3, rgb(255, 181, 150));
+    color: #ffffff;
+    
+    border-radius: 20px;
+    transform: scale(1.05);
+  }
+
+  .chat-message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+
+  .sender {
+    background-color: #0075f2;
+    color: #fff;
+    align-self: flex-end;
+    border-radius: 10px 10px 0px 10px;
+  }
+
+  .receiver {
+    background-color: #ff00ff;
+    color: #fff;
+    align-self: flex-start;
+    border-radius: 10px 10px 10px 0px;
+  }
+  .user-list li.active {
+    background: #ff00c3;
+    color: #ffffff;
+    border-radius: 20px;
+    transform: scale(1.05);
+  }
+  
+  .empty{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.391);
+    border: 3px dashed white;
+    border-radius: 25px;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    background-color: #ff00ff;
+    width: 50%;
+  }
+
+  @media (min-width: 767px){
+    .dropdown, option, select{
+      display: none;
+  
+    }
+  }
+ 
+  /* For mobile */
+@media (max-width: 767px) {
+
+
+  .conversation {
+    flex-direction: column;
+    align-items: stretch;
+    height: 93vh;
+  }
+
+  .dropdown { 
+    top: 0; 
+    width: 100%;
+    background-color: #008bc6;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999; 
+    margin: 0 auto;
+  }
+
+  .user-dropdown {
+    width: calc(100% ); /* Adjust width to fit within the dropdown */
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .container {
+    width: 100%;
+    height: calc(100vh - 40px); /* Adjust height to fill the viewport */
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .right-section {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    height: 90vh;
+  }
+
+  .left-section {
+    display: none; /* Hide the left section on mobile */
+  }
+
+  .user-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .user-list li {
+    font-weight: bold;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s, border-radius 0.3s;
+    background-color: #008bc6;
+    color: #ffffff;
+  }
+
+  .user-list li.active {
+    background: #ff00c3;
+    border-radius: 20px;
+    transform: scale(1.05);
+  }
+}

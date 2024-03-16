@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SyncAi - The Ai Automation Agency</title> 
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" type="image/png" href="static/web-icon.png">
+</head>
+<body>
+
+    <!--- popup Start with here  -->
+
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <img src="static/images/logo.png" alt="User Icon" class="user-icon">
+       
+      <input type="text" class="username" id="username" placeholder="Please enter Your Name.">
+      
+      <button class="popupsubmitbtn" onclick="saveUsername()">SUBMIT</button>
+    </div>
+  </div>
+
+  
+
+    <div id="chat-container"> 
+        <div class="header">
+           <h1 class="name">SyncAi's Chatbot</h1>
+       </div>
+               <div id="chat-messages" data-simplebar>
+                <p class="bot-content">Hey! Welcome to Syncai's Chatbot! Your virtual assistant for quick, accurate, and confidential company information.</p>
+           </div>
+           <div id="user-message">
+           <input type="text"  id="question" placeholder="How can i help you?">
+           <p class="sendtext" id="ask-btn">Send</p> 
+            </div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>

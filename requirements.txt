@@ -1,0 +1,13 @@
+python-dotenv
+flask
+langchain-community
+openai
+tiktoken
+pypdf2
+plotly
+scipy
+scikit-learn 
+langchain
+langchain_openai
+faiss-cpu
+sqlalchemy

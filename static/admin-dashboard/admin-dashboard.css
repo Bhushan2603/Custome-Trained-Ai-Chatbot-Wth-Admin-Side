@@ -1,0 +1,167 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .menu, .user-name, .logout{
+    display: none;
+  }
+  .menu-bottom { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    padding: 7px 0;
+    border-radius: 25px 25px 0 0;
+    border-top: 3px double white;
+    z-index: 999;
+  }
+
+  .menu-bottom .menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100% - 80px); /* Adjusted to account for logout button width */
+  }
+
+  .menu-bottom .menu li {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    transition: font-size 1s;
+    cursor: pointer;
+    color: skyblue; /* Change icon color to skyblue */
+  }
+
+  .menu-bottom .menu li a {
+    color: #65008a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  
+
+  /* New CSS for sticking bottom menu */
+  body {
+    position: relative;
+    margin-bottom: 80px; /* Adjust this value based on the height of your bottom menu bar */
+  }
+
+  .analytics-area {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #ff00aa, #0080ff);
+    color: #333;
+    padding: 2%;
+}
+ 
+.content{
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+  .list{
+    margin-top: -200px ;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+   .menu-bottom{
+    display: none;
+   }
+  .sidebar {
+    width: 20%;
+    height: 100vh;
+    background-color: #b6cbf1; 
+    color: #fff;
+    float: left; 
+    border: 5px double white;
+}
+     
+  .user-info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    font-family: 'Nunito';
+    font-size: 30px;
+    color: black;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    background-color: white;
+    padding: 10px ;
+    font-family: 'nunito';
+    color: black; 
+    border-radius: 15px;
+    width: 80%;
+    margin: 10px auto; 
+    transition: font-size 1s;
+    cursor: pointer;
+} 
+.menu li :hover {
+  font-size: 18px;
+
+} 
+  .menu li a {
+    color: #000;
+    text-decoration: none;    
+    font-weight: bold;
+    padding: 10px ;
+  }
+  
+  .content {
+    width: 80%;
+    height: 100vh;
+    background-color: #f4f4f4;
+    float: left;
+    overflow-y: auto;
+    border: 3px double white;
+  }
+  
+  .file-upload-page, .chat-history-page {
+    padding: 20px;
+  }
+  .logout {
+    display: block;
+    padding: 10px 20px;
+    font-family: 'nunito';
+    text-decoration: none;
+    color: #fff; /* Text color */
+    background-color: #7754f5; /* Change background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    left: 70px; /* Adjust the distance from the left */
+    z-index: 999; 
+    transition: 0.3s;
+  }
+  
+  .logout:hover {
+    background-color: #9135db;
+    font-size: 17px; /* Hover background color */
+  }
+  .grfmsg{
+    text-align: center;
+    color: #29292985;
+    font-size: 24px;
+  }
+}
+ 
