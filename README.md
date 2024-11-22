@@ -1,41 +1,111 @@
-<h1>Custome Trained Ai Chatbot With Admin Side</h1>
-<p>Welcome to our custom trained AI chatbot project, designed to enhance user experience and streamline information sharing about company services and products. This project consists of two main components: a user-facing chatbot interface and an admin dashboard for managing and analyzing chatbot performance.</p>
-<h2>User Interface</h2>
-<p>The user interface features an easy-to-use AI chatbot that answers queries related to company offerings. The chatbot provides responses based on information from text and PDF documents provided by the admin, as well as from scraping company websites.</p>
-<h2>Admin Dashboard</h2>
-<p>The Admin Dashboard Allows for:</p>
-<ul>
-  <li>Uploading and managing chatbot training documents</li>
-<li>Monitoring chatbot conversations</li>
-<li>Analyzing chatbot performance through selected dates</li>
-</ul>
-<h2>Custom Training</h2>
-<p>Our AI chatbot is custom trained to understand user queries and provide relevant information from various sources. We utilized OpenAI's API to understand given knowledge resources and used OpenAI's embeddings.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Trained AI Chatbot - README</title>
+</head>
+<body>
+    <h1>Custom Trained AI Chatbot with Admin Side</h1>
+    <p>
+        This guide will help you install, set up, and run the <strong>Custom Trained AI Chatbot</strong>. 
+        This chatbot is customizable and comes with an admin side for managing the data it uses. 
+        Even if you're unfamiliar with Git, Python, or programming, just follow these step-by-step instructions.
+    </p>
 
-<h2>Technical Requirements</h2>
-<p>To run the project locally, you will needL</p>
-<ol>
-  <li>Python 3.7+</li>
-<li>OpenAI API key (create an .env file containing OPENAI_API_KEY and place it alongside app.py)</li>
-<li>equired Python packages (listed in requirements.txt)</li>
-</ol>
-<h2>Getting Started</h2>
-<ol>
-  <li>Clone the repository: Git clone <my repository link></li>
-    <li>Install dependencies: pip install -r requirements.txt</li>
-    <li>Create an .env file with your OpenAi API key and place it beside app.py</li>
-    <li>Run the application: python main.py</li>
-</ol>
-<h2>Contribution</h2>
-<li>We welcome contributions from the open-soruces community. Please submit a pull request with your changes, and we will review and merge them accordingly.</li>
-<h2>License</h2>
-<p>This project is licensed under the MIT License. You are free to use, modify, and distribute the project as long as you provide attribution to the original authors.</p>
+    <hr>
 
-<h2>Company Perspective</h2>
-<p>This custom trained AI chatbot project is an innovative solution aimed at improving customer experience and streamlining company information sharing. By leveraging OpenAI's cutting-edge technology, the chatbot provides an efficient and reliable resource for both customers and administrators.</p>
+    <h2>🚀 Features</h2>
+    <ul>
+        <li>Chat with your data using AI.</li>
+        <li>Easy-to-use interface.</li>
+        <li>Customizable training data (see <code>data.txt</code> and <code>data.pdf</code> for details).</li>
+    </ul>
 
-<h3>Team Members</h3>
-<ul>
-  <li>Bhushan Patil: Project Lead, Ai Developer & Ai Consultant</li>
-  <li>Ishika Danej: Developer, Ai Developer & Ai Consultant</li>
-</ul>
+    <hr>
+
+    <h2>📋 Requirements</h2>
+    <ol>
+        <li>A computer with Python installed (<a href="https://www.python.org">Download Python</a>).</li>
+        <li>Basic understanding of how to open a terminal or command prompt.</li>
+    </ol>
+
+    <hr>
+
+    <h2>🛠️ Installation and Setup</h2>
+
+    <h3>1. Clone the Project</h3>
+    <ol>
+        <li>Open your terminal or command prompt.</li>
+        <li>Run the following command to download the project files:
+            <pre><code>git clone https://github.com/Bhushan2603/Custome-Trained-Ai-Chatbot-Wth-Admin-Side.git</code></pre>
+        </li>
+        <li>Navigate into the project folder:
+            <pre><code>cd Custome-Trained-Ai-Chatbot-Wth-Admin-Side</code></pre>
+        </li>
+    </ol>
+
+    <h3>2. Create a Virtual Environment</h3>
+    <ol>
+        <li>In the project directory, create a virtual environment using Python:
+            <pre><code>python -m venv myenv</code></pre>
+        </li>
+        <li>Activate the virtual environment:
+            <ul>
+                <li><strong>On Windows:</strong>
+                    <pre><code>myenv\scripts\activate</code></pre>
+                </li>
+                <li><strong>On macOS/Linux:</strong>
+                    <pre><code>source myenv/bin/activate</code></pre>
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>3. Install Dependencies</h3>
+    <p>With the virtual environment activated, install all required libraries:</p>
+    <pre><code>pip install -r requirements.txt</code></pre>
+
+    <h3>4. Run the Chatbot</h3>
+    <p>Start the chatbot with this command:</p>
+    <pre><code>python app.py</code></pre>
+
+    <hr>
+
+    <h2>🗨️ Chatbot Is Ready to Use!</h2>
+    <p>Open your browser and follow the instructions displayed in the terminal to access the chatbot. Start chatting with your data!</p>
+
+    <hr>
+
+    <h2>📚 Managing and Customizing Data</h2>
+    <p>
+        To modify the chatbot's data or training content:
+        <ul>
+            <li>Refer to the <code>data.txt</code> file for text-based information.</li>
+            <li>Use the <code>data.pdf</code> file for any additional data customization.</li>
+        </ul>
+    </p>
+
+    <hr>
+
+    <h2>❓ Troubleshooting</h2>
+    <p>If you encounter any issues:</p>
+    <ol>
+        <li>Ensure you have Python installed and added to your system PATH.</li>
+        <li>Verify that the virtual environment is activated.</li>
+        <li>Make sure all dependencies were successfully installed with <code>pip install -r requirements.txt</code>.</li>
+        <li>Check the terminal for error messages.</li>
+    </ol>
+    <p>For further assistance, visit the 
+        <a href="https://github.com/Bhushan2603/Custome-Trained-Ai-Chatbot-Wth-Admin-Side/issues">GitHub Issues page</a>.
+    </p>
+
+    <hr>
+
+    <h2>✨ Credits</h2>
+    <p>
+        This project is maintained by <a href="https://github.com/Bhushan2603">Bhushan2603</a>.
+    </p>
+    <p>Enjoy your AI-powered chatbot! 🎉</p>
+</body>
+</html>
