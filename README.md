@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Trained AI Chatbot - README</title>
-</head>
-<body>
+
     <h1>Custom Trained AI Chatbot with Admin Side</h1>
     <p>
         This guide will help you install, set up, and run the <strong>Custom Trained AI Chatbot</strong>. 
@@ -107,5 +100,3 @@
         This project is maintained by <a href="https://github.com/Bhushan2603">Bhushan2603</a>.
     </p>
     <p>Enjoy your AI-powered chatbot! 🎉</p>
-</body>
-</html>
